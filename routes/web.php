@@ -96,9 +96,9 @@ use App\Http\Models\Post;
 // Route::get('/about-us', function () {
 //     echo "Saya sedang belajar routing dan controller pada web";
 // });
-// Auth::routes();
+Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::get('/', function() {
 //     return view('home');
