@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -99,6 +100,8 @@ use App\Http\Controllers\WelcomeController;
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', function() {
-    return view('home');
-});
+// Route::get('/', function() {
+//     return view('home');
+// });
+
+Route::get('/', [HomeController::class, 'index']); 
