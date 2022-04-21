@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Models\Post;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -96,12 +97,15 @@ use App\Http\Models\Post;
 // Route::get('/about-us', function () {
 //     echo "Saya sedang belajar routing dan controller pada web";
 // });
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Route::get('/', function() {
 //     return view('home');
 // });
 
-Route::get('/', [HomeController::class, 'index']); 
+// Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'home']);
+
+Route::resource('articles', ArticleController::class);
