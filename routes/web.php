@@ -109,3 +109,5 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [HomeController::class, 'home']);
 
 Route::resource('articles', ArticleController::class);
+
+Route::get('/article/cetak_pdf', [ArticleController::class,'cetak_pdf'])->name('cetak_pdf');
